@@ -1,0 +1,32 @@
+2020-02-19 15:34:54,060  kannan cvo_sizer_app::<module>()  INFO  (PID: 1512)>  test1
+2020-02-19 15:34:54,061  kannan cvo_sizer_app::func()  INFO  (PID: 1512)>  test1
+2020-02-19 15:34:54,061  kannan cvo_sizer_app::func()  ERROR  (PID: 1512)>  division by zero
+Traceback (most recent call last):
+  File "C:/Users/navaneek/Desktop/DesktopItems/Work/StorageGrid/Planning/cvo_sizer/cvo_sizer/cvo_sizer_app.py", line 28, in func
+    1/0
+ZeroDivisionError: division by zero
+2020-02-19 15:34:57,596  kannan aws_sizing::get()  INFO  (PID: 1512)>  {'sizingId': '12345678', 'sizingType': 'FORWARD', 'sizingStatus': {'statusCode': 'SUCCESS', 'statusString': 'success message'}, 'cloudVendorType': 'AWS', 'isSingleNode': 'True', 'input': {'effectiveCapacityTiB': 10, 'throughput': 100, 'throughputType': 'MBPS', 'storageEfficiency': 3, 'rndReadPcnt': 25, 'rndReadBlockSize': '16KB', 'rndWritePcnt': 25, 'rndWriteBlockSize': '16KB', 'seqReadPcnt': 25, 'seqReadBlockSize': '16KB', 'seqWritePcnt': 25, 'seqWriteBlockSize': '16KB', 'flashCache': 'True', 'isSingleNode': 'True', 'isPerformanceDegradeOk': 'True', 'cloudVendor': 'AWS', 'licenseType': 'BYOL'}, 'totalBackend': {'tput': {'mbps': 13671.88, 'iops': 2312500}}, 'totalFrontend': {'tput': {'mbps': 13671.88, 'iops': 2312500, 'randomReadIops': 10000, 'randomWriteIops': 10000, 'seqReadIops': 10500, 'sequentialWriteIops': 26000, 'randomReadMbps': 45, 'randomWriteMbps': 50, 'seqReadMbps': 52, 'sequentialWriteMbps': 30}}, 'configs': [{'instanceType': 'c5d.4xlarge', 'diskType': 'GP2', 'numberInstance': 73, 'diskSize': '2TB', 'totalDisks': 143, 'flashCache': '900GB VMME', 'costIndex': 1, 'configDecidedBy': 'perf', 'cloudVendor': 'AWS'}, {'instanceType': 'm4.xlarge', 'diskType': 'GP2', 'numberInstance': 73, 'diskSize': '2TB', 'totalDisks': 143, 'flashCache': '900GB VMME', 'costIndex': 2, 'configDecidedBy': 'capacity', 'cloudVendor': 'AWS'}, {'instanceType': 'm4.2xlarge', 'diskType': 'GP2', 'numberInstance': 386, 'diskSize': '2TB', 'totalDisks': 386, 'flashCache': '400GB VMME', 'costIndex': 3, 'configDecidedBy': 'perf', 'cloudVendor': 'AWS'}]}
+2020-02-21 15:05:11,363  kannan sgws_sizer_app::<module>()  INFO  (PID: 23488)>  test1
+2020-02-21 15:05:20,384  kannan sgws_sizer_app::<module>()  INFO  (PID: 13584)>  test1
+2020-02-21 15:08:01,088  kannan sgws_sizer_app::<module>()  INFO  (PID: 19440)>  test1
+2020-02-21 15:08:55,971  kannan sgws_sizer_app::<module>()  INFO  (PID: 22372)>  test1
+2020-02-21 15:11:12,606  kannan sgws_sizer_app::<module>()  INFO  (PID: 14524)>  test1
+2020-02-21 15:12:24,204  kannan sgws_sizer_app::<module>()  INFO  (PID: 22092)>  test1
+2020-02-21 15:14:26,160  kannan sgws_sizer_app::<module>()  INFO  (PID: 12472)>  test1
+2020-02-21 15:18:12,582  kannan sgws_sizer_app::<module>()  INFO  (PID: 12860)>  test1
+2020-02-21 15:22:08,145  kannan sgws_sizer_app::<module>()  INFO  (PID: 2748)>  test1
+2020-02-21 15:25:13,235  kannan sgws_sizer_app::<module>()  INFO  (PID: 11284)>  test1
+2020-02-21 15:26:58,669  kannan sgws_sizer_app::<module>()  INFO  (PID: 15740)>  test1
+2020-02-21 15:29:07,094  kannan sgws_sizer_app::<module>()  INFO  (PID: 25300)>  test1
+2020-02-21 15:29:49,002  kannan sgws_sizer_app::<module>()  INFO  (PID: 20104)>  test1
+2020-02-21 15:30:17,175  kannan sgws_sizer_app::<module>()  INFO  (PID: 9608)>  test1
+2020-02-21 15:30:40,822  kannan sgws_sizer_app::<module>()  INFO  (PID: 17300)>  test1
+2020-02-21 15:34:33,406  kannan sgws_sizer_app::<module>()  INFO  (PID: 1244)>  test1
+2020-02-21 15:34:39,536  kannan sgws_sizer_app::<module>()  INFO  (PID: 20504)>  test1
+2020-02-21 15:39:32,734  kannan sgws_sizer_app::<module>()  INFO  (PID: 13976)>  test1
+2020-02-21 15:40:06,299  kannan sgws_sizer_app::<module>()  INFO  (PID: 27296)>  test1
+2020-02-21 15:41:55,664  kannan sgws_sizer_app::<module>()  INFO  (PID: 29556)>  test1
+2020-02-21 15:43:51,290  kannan sgws_sizer_app::<module>()  INFO  (PID: 14028)>  test1
+2020-02-21 15:49:01,184  kannan sgws_sizer_app::<module>()  INFO  (PID: 23764)>  test1
+2020-02-21 15:49:36,518  kannan sgws_sizer_app::<module>()  INFO  (PID: 22124)>  test1
+2020-02-21 15:50:09,587  kannan sgws_sizer_app::<module>()  INFO  (PID: 23864)>  test1

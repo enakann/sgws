@@ -1,0 +1,7 @@
+model,type,unit,put_per_sn,get_per_sn,notes
+6060S,Small Object Rate,Object/s,1275,2225,Testing is still ongoing to determine accurate metric and value.
+6060L,Large Object Throughput,MB/s,625,1525,Testing is still ongoing to determine accurate metric and value.
+5760S,Small Object Rate,Object/s,600,825,Testing is still ongoing to determine accurate metric and value.
+5760L,Large Object Throughput,MB/s,450,525,Testing is still ongoing to determine accurate metric and value.
+5712S,Small Object Rate,Object/s,600,525,Testing is still ongoing to determine accurate metric and value.
+5712L,Large Object Throughput,MB/s,350,350,Testing is still ongoing to determine accurate metric and value.

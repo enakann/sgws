@@ -1,0 +1,60 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "verbose": {
+            "format": "%(name)s  %(asctime)s  %(module)s::%(funcName)s()  %(levelname)s  (PID: %(process)d)>  %(message)s"
+        },
+        "simple": {
+            "format": "firms  %(asctime)s  %(levelname)s >  %(message)s"
+        }
+    },
+
+    "handlers": {
+
+        "firms-applier": {
+            "level": "DEBUG",
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "formatter": "verbose",
+            "filename": "C:\\Users\\navaneek\\Desktop\\DesktopItems\\Work\\StorageGrid\\Planning\\cvo_sizer\\cvo_sizer\\log\\error.log",
+            "when": "midnight",
+            "backupCount": 10,
+            "encoding": "utf8"
+        },
+
+        "firms-error": {
+            "level": "ERROR",
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "formatter": "verbose",
+            "filename": "C:\\Users\\navaneek\\Desktop\\DesktopItems\\Work\\StorageGrid\\Planning\\cvo_sizer\\cvo_sizer\\log\\info.log",
+            "when": "midnight",
+            "backupCount": 10,
+            "encoding": "utf8"
+        },
+        "sys-logger": {
+            "class": "logging.handlers.SysLogHandler",
+            "address": "/dev/log",
+            "formatter": "simple"
+        }
+    },
+
+    "root": {
+            "level": "ERROR",
+            "handlers": ["firms-error"]
+    },
+
+    "loggers": {
+        "firms-applier": {
+            "level": "DEBUG",
+            "handlers": ["firms-applier"],
+            "propagate": "false"
+        },
+
+        "sys-logger": {
+            "level": "DEBUG",
+            "handlers": ["sys-logger"],
+            "propagate": "false"
+        }
+
+    }
+}

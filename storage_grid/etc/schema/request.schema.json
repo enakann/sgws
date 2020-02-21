@@ -1,0 +1,87 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Applier Input Payload",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "firewall-name": {
+                "type": "string"
+            },
+            "meta-data": {
+                "type": "object",
+                "properties": {
+                    "domain": {
+                        "type": "string"
+                    },
+                    "model": {
+                        "type": "string"
+                    },
+                    "os": {
+                        "type": "string"
+                    },
+                    "vendor": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "domain",
+                    "model",
+                    "os",
+                    "vendor"
+                ]
+            },
+            "new_addr_cmd": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "minItems": 1
+            },
+            "new_app_cmd": {
+                "type": "array",
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 1
+                },
+                "minItems": 1
+            },
+            "pol_details": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "pol_cmd": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "minItems": 1
+                        },
+                        "row_num": {
+                            "type": "array",
+                            "items": {
+                                "type": "number"
+                            },
+                            "minItems": 1
+                        }
+                    },
+                    "required": [
+                        "pol_cmd",
+                        "row_num"
+                    ]
+                },
+                "minItems": 1
+            }
+        },
+        "required": [
+            "firewall-name",
+            "meta-data",
+            "pol_details"
+        ]
+    },
+    "minItems": 1
+}
