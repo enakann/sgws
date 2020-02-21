@@ -1,4 +1,4 @@
-from storage_grid.etc import constants
+from etc import constants
 
 class Msg:
     def __init__(self):

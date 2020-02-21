@@ -1,6 +1,6 @@
 import yaml
 import os
-from storage_grid.settings import LOG_CFG_PATH,LOG_PATH
+from settings import LOG_CFG_PATH,LOG_PATH
 import logging
 import logging.config
 
