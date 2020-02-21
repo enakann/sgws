@@ -4,15 +4,19 @@ FROM nginx
 ENV HOME=/opt/repo
 
 # install python, uwsgi, and supervisord
-RUN apt-get update && apt-get install -y supervisor uwsgi python python-pip procps vim && \
-    /usr/bin/pip install uwsgi==2.0.17 flask==1.0.2
+RUN apt-get update && apt-get install -y supervisor uwsgi python3 python3-pip procps vim 
+RUN /usr/bin/pip3 install uwsgi flask flask_restful
+
+RUN rm -rf /usr/bin/python && ln -s /usr/bin/python3 /usr/bin/python
 
 # Source code file
 COPY ./storage_grid ${HOME}/storage_grid
 
+RUN pip3 install -r ${HOME}/storage_grid/requirements.txt
 # Copy the configuration file from the current directory and paste 
 # it inside the container to use it as Nginx's default config.
 COPY ./deployment/nginx.conf /etc/nginx/nginx.conf
+
 
 # setup NGINX config
 RUN mkdir -p /spool/nginx /run/pid && \

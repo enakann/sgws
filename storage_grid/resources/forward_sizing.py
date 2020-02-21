@@ -13,7 +13,7 @@ from flask_jwt_extended import (jwt_required,
                                 get_jwt_claims,
                                 jwt_optional,
                                 get_jwt_identity)
-from storage_grid.libs.sizer import Sizer
+from libs.sizer import Sizer
 import logging
 import json
 import ast

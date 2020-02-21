@@ -2,8 +2,8 @@ import os
 import re
 import csv
 import math
-from storage_grid.settings import MODELS_PATH
-from storage_grid.libs.sizer_msg import Msg
+from settings import MODELS_PATH
+from libs.sizer_msg import Msg
 
 class SGDAO:
     def __init__(self,msg,inputData):
