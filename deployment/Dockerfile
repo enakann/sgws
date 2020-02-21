@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y supervisor uwsgi python python-pip proc
     /usr/bin/pip install uwsgi==2.0.17 flask==1.0.2
 
 # Source code file
-COPY ./storage_grid ${HOME}/src
+COPY ./storage_grid ${HOME}/storage_grid
 
 # Copy the configuration file from the current directory and paste 
 # it inside the container to use it as Nginx's default config.
