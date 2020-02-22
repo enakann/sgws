@@ -15,5 +15,6 @@ spec:
         containers:
           - name: sgws
             image: kannan1985/sgws
+            user: "1001"
             ports:
               - containerPort: 8080

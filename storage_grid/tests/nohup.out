@@ -1,0 +1,71 @@
+[2020-02-21 14:31:08,974] scspa1785968001/INFO/locust.main: Starting Locust 0.14.4
+[2020-02-21 14:31:16,310] scspa1785968001/ERROR/stderr: Traceback (most recent call last):
+[2020-02-21 14:31:16,310] scspa1785968001/ERROR/stderr: File "/home/spmuser/.local/bin/locust", line 11, in <module>
+[2020-02-21 14:31:16,311] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:31:16,311] scspa1785968001/ERROR/stderr: sys.exit(main())
+[2020-02-21 14:31:16,311] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:31:16,311] scspa1785968001/ERROR/stderr: File "/home/spmuser/.local/lib/python3.6/site-packages/locust/main.py", line 503, in main
+[2020-02-21 14:31:16,312] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:31:16,312] scspa1785968001/ERROR/stderr: runners.locust_runner = MasterLocustRunner(locust_classes, options)
+[2020-02-21 14:31:16,312] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:31:16,312] scspa1785968001/ERROR/stderr: File "/home/spmuser/.local/lib/python3.6/site-packages/locust/runners.py", line 349, in __init__
+[2020-02-21 14:31:16,313] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:31:16,313] scspa1785968001/ERROR/stderr: self.server = rpc.Server(self.master_bind_host, self.master_bind_port)
+[2020-02-21 14:31:16,313] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:31:16,313] scspa1785968001/ERROR/stderr: File "/home/spmuser/.local/lib/python3.6/site-packages/locust/rpc/zmqrpc.py", line 41, in __init__
+[2020-02-21 14:31:16,313] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:31:16,314] scspa1785968001/ERROR/stderr: self.socket.bind("tcp://%s:%i" % (host, port))
+[2020-02-21 14:31:16,314] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:31:16,314] scspa1785968001/ERROR/stderr: File "zmq/backend/cython/socket.pyx", line 550, in zmq.backend.cython.socket.Socket.bind
+[2020-02-21 14:31:16,314] scspa1785968001/ERROR/stderr: File "zmq/backend/cython/checkrc.pxd", line 25, in zmq.backend.cython.checkrc._check_rc
+[2020-02-21 14:31:16,315] scspa1785968001/ERROR/stderr: zmq.error
+[2020-02-21 14:31:16,315] scspa1785968001/ERROR/stderr: .
+[2020-02-21 14:31:16,315] scspa1785968001/ERROR/stderr: ZMQError
+[2020-02-21 14:31:16,315] scspa1785968001/ERROR/stderr: :
+[2020-02-21 14:31:16,315] scspa1785968001/ERROR/stderr: Address already in use
+[2020-02-21 14:31:16,315] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:31:37,895] scspa1785968001/INFO/locust.runners: Hatching and swarming 1000 users at the rate 1 users/s (0 users already running)...
+[2020-02-21 14:32:21,126] scspa1785968001/ERROR/stderr: Traceback (most recent call last):
+[2020-02-21 14:32:21,127] scspa1785968001/ERROR/stderr: File "/home/spmuser/.local/bin/locust", line 11, in <module>
+[2020-02-21 14:32:21,127] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:32:21,127] scspa1785968001/ERROR/stderr: sys.exit(main())
+[2020-02-21 14:32:21,127] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:32:21,127] scspa1785968001/ERROR/stderr: File "/home/spmuser/.local/lib/python3.6/site-packages/locust/main.py", line 503, in main
+[2020-02-21 14:32:21,128] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:32:21,128] scspa1785968001/ERROR/stderr: runners.locust_runner = MasterLocustRunner(locust_classes, options)
+[2020-02-21 14:32:21,128] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:32:21,128] scspa1785968001/ERROR/stderr: File "/home/spmuser/.local/lib/python3.6/site-packages/locust/runners.py", line 349, in __init__
+[2020-02-21 14:32:21,129] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:32:21,129] scspa1785968001/ERROR/stderr: self.server = rpc.Server(self.master_bind_host, self.master_bind_port)
+[2020-02-21 14:32:21,129] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:32:21,129] scspa1785968001/ERROR/stderr: File "/home/spmuser/.local/lib/python3.6/site-packages/locust/rpc/zmqrpc.py", line 41, in __init__
+[2020-02-21 14:32:21,129] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:32:21,130] scspa1785968001/ERROR/stderr: self.socket.bind("tcp://%s:%i" % (host, port))
+[2020-02-21 14:32:21,130] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:32:21,130] scspa1785968001/ERROR/stderr: File "zmq/backend/cython/socket.pyx", line 550, in zmq.backend.cython.socket.Socket.bind
+[2020-02-21 14:32:21,130] scspa1785968001/ERROR/stderr: File "zmq/backend/cython/checkrc.pxd", line 25, in zmq.backend.cython.checkrc._check_rc
+[2020-02-21 14:32:21,130] scspa1785968001/ERROR/stderr: zmq.error
+[2020-02-21 14:32:21,131] scspa1785968001/ERROR/stderr: .
+[2020-02-21 14:32:21,131] scspa1785968001/ERROR/stderr: ZMQError
+[2020-02-21 14:32:21,131] scspa1785968001/ERROR/stderr: :
+[2020-02-21 14:32:21,131] scspa1785968001/ERROR/stderr: Address already in use
+[2020-02-21 14:32:21,131] scspa1785968001/ERROR/stderr: 
+[2020-02-21 14:32:26,765] scspa1785968001/INFO/locust.main: Starting Locust 0.14.4
+[2020-02-21 14:32:26,776] scspa1785968001/INFO/locust.runners: Hatching and swarming 1000 users at the rate 1 users/s (0 users already running)...
+[2020-02-21 14:32:42,768] scspa1785968001/INFO/locust.runners: Hatching and swarming 984 users at the rate 1 users/s (16 users already running)...
+[2020-02-21 14:34:03,163] scspa1785968001/INFO/locust.runners: Hatching and swarming 1000 users at the rate 1 users/s (0 users already running)...
+[2020-02-21 14:49:27,460] scspa1785968001/INFO/locust.runners: Got quit message from master, shutting down...
+[2020-02-21 14:49:27,462] scspa1785968001/INFO/locust.main: Shutting down (exit code 0), bye.
+[2020-02-21 14:49:27,462] scspa1785968001/INFO/locust.main: Cleaning up runner...
+[2020-02-21 14:49:27,462] scspa1785968001/INFO/locust.main: Running teardowns...
+ Name                                                          # reqs      # fails     Avg     Min     Max  |  Median   req/s failures/s
+--------------------------------------------------------------------------------------------------------------------------------------------
+ GET /sgws/sg/forward                                               0     0(0.00%)       0       0       0  |       0    0.00    0.00
+--------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                         0     0(0.00%)       0       0       0  |       0    0.00    0.00
+
+Percentage of the requests completed within given times
+ Type                 Name                                                           # reqs    50%    66%    75%    80%    90%    95%    98%    99%  99.9% 99.99%   100%
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+

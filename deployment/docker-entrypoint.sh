@@ -3,11 +3,13 @@ set -e
 
 # http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
 # if the running user is an Arbitrary User ID
+user=1001
+USER_NAME="spmuser"
 if ! whoami &> /dev/null; then
   # make sure we have read/write access to /etc/passwd
   if [ -w /etc/passwd ]; then
     # write a line in /etc/passwd for the Arbitrary User ID in the 'root' group
-    echo "${USER_NAME:-default}:x:$(id -u):0:${USER_NAME:-default} user:${HOME}:/sbin/nologin" >> /etc/passwd
+    echo "${USER_NAME:-default}:x:$(user):0:${USER_NAME:-default} user:${HOME}:/sbin/nologin" >> /etc/passwd
   fi
 fi
 
@@ -17,4 +19,4 @@ if [ "$1" = 'supervisord' ]; then
 fi
 
 
-exec "$@"
+exec /usr/local/bin/gosu spmuser "$@"

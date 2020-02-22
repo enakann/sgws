@@ -13,6 +13,7 @@ from flask import Flask
 from flask_restful import Api
 from utils.logger import Logger
 from resources.forward_sizing import SGWSForwardSizing
+from resources.reverse_sizing import SGWSReverseSizing
 
 loggerObj=Logger("kannan")
 logger=loggerObj.get_logger()
@@ -23,7 +24,9 @@ app = Flask(__name__)
 api = Api(app)
 
 
-#api.add_resource(SGWSForwardSizing, '/sgws/sg/forward')
+api.add_resource(SGWSForwardSizing, '/sgws/sg/forward')
+
+api.add_resource(SGWSReverseSizing,'/sgws/sg/reverse')
 
 def main(restPort):
    api.add_resource(SGWSForwardSizing, '/sgws/sg/forward')
