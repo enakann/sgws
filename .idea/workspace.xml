@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="19216c68-fe34-4a80-be3b-f3ac3b3fd1ad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose_dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose_dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose_test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/service.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage_grid/logs/info.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage_grid/logs/info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage_grid/resources/forward_sizing.py" beforeDir="false" afterPath="$PROJECT_DIR$/storage_grid/resources/forward_sizing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage_grid/sgws_sizer_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/storage_grid/sgws_sizer_app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,22 +208,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1582294144642" />
-    <state width="1259" height="176" key="GridCell.Tab.0.bottom" timestamp="1582378883630">
+    <state width="1259" height="205" key="GridCell.Tab.0.bottom" timestamp="1582402188808">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="176" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582378883630" />
-    <state width="1259" height="176" key="GridCell.Tab.0.center" timestamp="1582378883630">
+    <state width="1259" height="205" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582402188808" />
+    <state width="1259" height="205" key="GridCell.Tab.0.center" timestamp="1582402188808">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="176" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582378883630" />
-    <state width="1259" height="176" key="GridCell.Tab.0.left" timestamp="1582378883630">
+    <state width="1259" height="205" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582402188808" />
+    <state width="1259" height="205" key="GridCell.Tab.0.left" timestamp="1582402188808">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="176" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582378883630" />
-    <state width="1259" height="176" key="GridCell.Tab.0.right" timestamp="1582378883630">
+    <state width="1259" height="205" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582402188808" />
+    <state width="1259" height="205" key="GridCell.Tab.0.right" timestamp="1582402188808">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="176" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582378883630" />
+    <state width="1259" height="205" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582402188808" />
     <state x="354" y="59" key="MultipleFileMergeDialog" timestamp="1582312002903">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -240,10 +236,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="349" y="170" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1582275098128" />
-    <state x="452" y="261" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582311979575">
+    <state x="452" y="261" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582392221130">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="452" y="261" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1582311979575" />
+    <state x="452" y="261" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1582392221130" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1582221889310">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
