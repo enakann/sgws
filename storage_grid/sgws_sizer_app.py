@@ -23,7 +23,7 @@ app = Flask(__name__)
 api = Api(app)
 
 
-#api.add_resource(SGWSForwardSizing, '/sgws/sg/forward')
+api.add_resource(SGWSForwardSizing, '/sgws/sg/forward')
 
 def main(restPort):
    api.add_resource(SGWSForwardSizing, '/sgws/sg/forward')

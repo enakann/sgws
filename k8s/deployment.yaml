@@ -17,3 +17,6 @@ spec:
             image: kannan1985/sgws
             ports:
               - containerPort: 8080
+            securityContext:
+              runAsUser: 2000
+              allowPrivilegeEscalation: false
