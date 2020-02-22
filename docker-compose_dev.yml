@@ -5,7 +5,7 @@ services:
          context: ./deployment
          dockerfile: Dockerfile
        image: sgws
-       user: 1001
+       user: "1001"
        volumes:
          - "./storage_grid:/opt/repo/storage_grid"
        ports:

@@ -5,6 +5,7 @@ services:
          context: ./deployment
          dockerfile: Dockerfile
       image: sgws
-       volumes:
+      user: "1001"
+      volumes:
          - "./storage_grid:/opt/repo/storage_grid"
-       command: ["nosetests", "--with-xunit","--xunit-file=./tests/nosetests.xml" ,"--with-coverage", "--cover-html" ,"--cover-html-dir=./tests/htmlcov", "--cover-xml","--cover-xml-file=./tests/coverage.xml"]
+      command: ["nosetests", "--with-xunit","--xunit-file=./tests/nosetests.xml" ,"--with-coverage", "--cover-html" ,"--cover-html-dir=./tests/htmlcov", "--cover-xml","--cover-xml-file=./tests/coverage.xml"]
