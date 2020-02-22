@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: sgws-nodepot
+spec:
+  selector:
+    component: sgwsk8
+  ports:
+  - name: http
+    port: 8080
+    nodePort: 30030
+  type: NodePort

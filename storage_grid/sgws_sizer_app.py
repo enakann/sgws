@@ -23,12 +23,12 @@ app = Flask(__name__)
 api = Api(app)
 
 
-api.add_resource(SGWSForwardSizing, '/sgws/sg/forward')
+#api.add_resource(SGWSForwardSizing, '/sgws/sg/forward')
 
-#def main(restPort):
-#    api.add_resource(SGWSForwardSizing, '/sgws/sg/forward')
-#    app.run(host='0.0.0.0', port=restPort, debug=os.environ.get('DEBUG', 0))
+def main(restPort):
+   api.add_resource(SGWSForwardSizing, '/sgws/sg/forward')
+   app.run(host='0.0.0.0', port=restPort, debug=os.environ.get('DEBUG', 0))
 
 
-#if __name__ == '__main__':
-#    main(8000)
+if __name__ == '__main__':
+    main(8000)

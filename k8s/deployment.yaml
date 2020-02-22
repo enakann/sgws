@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sgws-deployment
+spec:
+  replicas: 1
+  selector:
+     matchLabels:
+        component: sgwsk8
+  template:
+     metadata:
+        labels:
+           component: sgwsk8
+     spec:
+        containers:
+          - name: sgws
+            image: kannan1985/sgws
+            ports:
+              - containerPort: 8080

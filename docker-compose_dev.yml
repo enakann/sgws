@@ -1,0 +1,13 @@
+version: '3'
+services:
+    directors_web_app:
+       build:
+         context: ./deployment
+         dockerfile: Dockerfile
+       image: sgws
+       volumes:
+         - "./storage_grid:/opt/repo/storage_grid"
+       ports:
+         - "8080:8080"
+       environment:
+         - FLASK_DEBUG=1

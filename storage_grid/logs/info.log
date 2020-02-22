@@ -32,3 +32,5 @@ ZeroDivisionError: division by zero
 2020-02-21 15:50:09,587  kannan sgws_sizer_app::<module>()  INFO  (PID: 23864)>  test1
 2020-02-21 13:42:15,745  kannan sgws_sizer_app::<module>()  INFO  (PID: 10532)>  test1
 2020-02-21 13:42:35,470  kannan sgws_sizer_app::<module>()  INFO  (PID: 10641)>  test1
+2020-02-22 00:37:09,870  kannan sgws_sizer_app::<module>()  INFO  (PID: 10648)>  test1
+2020-02-22 00:38:07,191  kannan sgws_sizer_app::<module>()  INFO  (PID: 7640)>  test1
