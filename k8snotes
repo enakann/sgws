@@ -1,0 +1,160 @@
+spmuser@scspa1785968001:~/sgws_nginx/sgws(master)$ helm install --dry-run --debug --generate-name ./sghelm/
+install.go:149: [debug] Original chart version: ""
+install.go:166: [debug] CHART PATH: /home/spmuser/sgws_nginx/sgws/sghelm
+
+NAME: sghelm-1582460102
+LAST DEPLOYED: Sun Feb 23 07:15:02 2020
+NAMESPACE: default
+STATUS: pending-install
+REVISION: 1
+USER-SUPPLIED VALUES:
+{}
+
+COMPUTED VALUES:
+affinity: {}
+fullnameOverride: ""
+image:
+  pullPolicy: IfNotPresent
+  repository: kannan1985/sgws
+imagePullSecrets: []
+ingress:
+  annotations: {}
+  enabled: false
+  hosts:
+  - host: chart-example.local
+    paths: []
+  tls: []
+nameOverride: ""
+nodeSelector:
+  component: sgwsk8
+podSecurityContext: {}
+replicaCount: 1
+resources: {}
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
+service:
+  containerPort: 8080
+  nodePort: 300311
+  type: NodePort
+serviceAccount:
+  create: true
+  name: null
+tolerations: []
+
+HOOKS:
+---
+# Source: sghelm/templates/tests/test-connection.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "sghelm-1582460102-test-connection"
+  labels:
+
+    helm.sh/chart: sghelm-0.1.0
+    app.kubernetes.io/name: sghelm
+    app.kubernetes.io/instance: sghelm-1582460102
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args:  ['sghelm-1582460102:']
+  restartPolicy: Never
+MANIFEST:
+---
+# Source: sghelm/templates/serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: sghelm-1582460102
+  labels:
+
+    helm.sh/chart: sghelm-0.1.0
+    app.kubernetes.io/name: sghelm
+    app.kubernetes.io/instance: sghelm-1582460102
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+---
+# Source: sghelm/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: sghelm-1582460102
+  labels:
+    helm.sh/chart: sghelm-0.1.0
+    app.kubernetes.io/name: sghelm
+    app.kubernetes.io/instance: sghelm-1582460102
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      nodePort: 300311
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: sghelm
+    app.kubernetes.io/instance: sghelm-1582460102
+---
+# Source: sghelm/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sghelm-1582460102
+  labels:
+    helm.sh/chart: sghelm-0.1.0
+    app.kubernetes.io/name: sghelm
+    app.kubernetes.io/instance: sghelm-1582460102
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: sghelm
+      app.kubernetes.io/instance: sghelm-1582460102
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: sghelm
+        app.kubernetes.io/instance: sghelm-1582460102
+    spec:
+      serviceAccountName: sghelm-1582460102
+      securityContext:
+        {}
+      containers:
+        - name: sghelm
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+          image: "kannan1985/sgws:1.16.0"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /sgws/sg/forward
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /sgws/sg/forward
+              port: http
+          resources:
+            {}
+      nodeSelector:
+        component: sgwsk8
+
+NOTES:
+1. Get the application URL by running these commands:
+  export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services sghelm-1582460102)
+  export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")
+  echo http://$NODE_IP:$NODE_PORT
+
