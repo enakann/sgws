@@ -37,13 +37,23 @@ service:
   containerPort: 8080
   nodePort: 30004
 ingress:
-  enabled: false
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
+  enabled: true
+  metadata:
+    name: ingress-service
+  annotations:
+    kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: chart-example.local
-      paths: []
+    - host: scspa1785968002.rtp.openenglab.netapp.com
+      paths:
+        - path: "/directors"
+          backend:
+            serviceName: rest-cluster-ip-service
+            servicePort: 5002
+        - path: "/sgws/sg/"
+          backend:
+            serviceName: sgws-nodepot
+            servicePort: 8080
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:

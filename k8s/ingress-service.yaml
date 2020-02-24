@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+   name: ingress-service
+   annotations:
+     kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /directors
+            backend:
+              serviceName: rest-cluster-ip-service
+              servicePort: 5002
+          - path: /sgws/sg/
+            backend:
+              serviceName: sgws-nodepot
+              servicePort: 8080 
+
+
+
